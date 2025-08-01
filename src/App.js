@@ -67,14 +67,7 @@ export default function App() {
               backgroundColor: "#69bf70",
             }}
           >
-            {/* <div className="signUp-container" style={{ display: "flex" }}>
-              <Suspense fallback={<Loader />}>
-                <LeftSide />
-                <div className="signUp-right signUp-column">
-                  <AccountBox />
-                </div>
-              </Suspense>
-                      type="button"
+          
 
             <div className="signUp-container" style={{ display: "flex" }}>
               <Suspense fallback={<div className="left-side-loader"><Loader /></div>}>
@@ -148,6 +141,4 @@ export default function App() {
 }
 
 
-            }
-  )
-}
+  

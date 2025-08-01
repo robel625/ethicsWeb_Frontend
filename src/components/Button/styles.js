@@ -27,4 +27,17 @@ export const StyledButton = styled("button").attrs(({ color }) => ({
     background-color: rgb(255, 130, 92);   
 
   }
+
+  &:disabled {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #ccc;
+      border: 1px solid #ccc;
+    }
+  }
 `;

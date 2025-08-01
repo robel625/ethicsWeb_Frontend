@@ -17,11 +17,14 @@ import { AmhtreeData } from "./AmhTreeData";
 import i18n from "../translation";
 import { useStateContext } from "../Contexts/ContextProvider";
 import Check_Status from "./Check_Status";
+import OTPVerification from "./OTPVerification";
 
 // function SignupForm() {
 const SignupForm = ({t,scrollTo}) => {
   const { values, errors, handleChange, handleSubmit, setProgress, progress, msg,ticket, setFormState} = useForm(validate);
   const [date, setDate] = useState(null);
+  const [showOTPVerification, setShowOTPVerification] = useState(false);
+  const [isPhoneVerified, setIsPhoneVerified] = useState(false);
 
   const { handleClick, isClicked } = useStateContext();
   
@@ -41,6 +44,20 @@ const SignupForm = ({t,scrollTo}) => {
     }));
   };
   
+  const handlePhoneBlur = () => {
+    if (values.yourPhone && !errors.yourPhone && !isPhoneVerified) {
+      // Check if phone number is valid before showing OTP
+      if (/^((0\d{9})|(7\d{8})|(9\d{8})|(251\d{9})|(\+251\d{9}))$/.test(values.yourPhone) && 
+          /^(09|07|9|7|251|\+251)/.test(values.yourPhone)) {
+        setShowOTPVerification(true);
+      }
+    }
+  };
+
+  const handleOTPVerificationSuccess = () => {
+    setIsPhoneVerified(true);
+    setShowOTPVerification(false);
+  };
     function ValidationType({ type }) {
       const ErrorMessage = errors[type];
       return ErrorMessage ? <span style={{ marginTop: 0, marginBottom: 10, color: 'red' }}>{ErrorMessage}</span> : <span></span>;
@@ -153,6 +170,9 @@ const SignupForm = ({t,scrollTo}) => {
               <div className="-mt-[10px]">
               <label htmlFor="yourPhone" className="inboxTitle">{t("Your phone")}
                 <span style={{color: "red", fontSize: 20, paddingLeft: 3}}>*</span>
+                {isPhoneVerified && (
+                  <span style={{color: "green", fontSize: 12, marginLeft: 5}}>✓ {t("Verified")}</span>
+                )}
                 </label>
 
                 <div className="wrapper">
@@ -164,13 +184,14 @@ const SignupForm = ({t,scrollTo}) => {
 
                 </div>
                   <input 
-                  className={`input1 ${errors.yourPhone ? 'error' : ''}`}
+                  className={`input1 ${errors.yourPhone ? 'error' : ''} ${isPhoneVerified ? 'verified' : ''}`}
                    type="tel"
                    name="yourPhone"
                    id= "yourPhone"
                    placeholder={t("Your Phone Number")}
                    value={values.yourPhone || ""}
                    onChange={handleChange}
+                   onBlur={handlePhoneBlur}
                    maxLength={values.yourPhone?.startsWith("7") || values.yourPhone?.startsWith("9")
                     ? 9
                     : values.yourPhone?.startsWith("251")
@@ -473,6 +494,7 @@ const SignupForm = ({t,scrollTo}) => {
             </div>}
               <ButtonContainer>
                 <Button name="submit"
+                disabled={!isPhoneVerified}
                 onClick={() => {
                   // Set the form as submitted and trigger scroll
                   setIsSubmitted(true);
@@ -484,6 +506,13 @@ const SignupForm = ({t,scrollTo}) => {
 
 
       {isClicked.check_status && <Check_Status/>}
+      {showOTPVerification && (
+        <OTPVerification
+          phoneNumber={values.yourPhone}
+          onVerificationSuccess={handleOTPVerificationSuccess}
+          onClose={() => setShowOTPVerification(false)}
+        />
+      )}
         </BoxContainer>
     );
 }

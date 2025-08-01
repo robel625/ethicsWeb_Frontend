@@ -36,6 +36,8 @@ export const useForm = (validate) => {
     errors: { ...initialValues },
   });
 
+  const [isPhoneVerified, setIsPhoneVerified] = useState(false);
+
   const dispatch = useDispatch()
 
   const [totalFileSize, setTotalFileSize] = useState(0);
@@ -90,7 +92,7 @@ export const useForm = (validate) => {
     event.preventDefault();
     setUpload(false);
     const values = formState.values;
-    const errors = validate(values);
+    const errors = validate(values, isPhoneVerified);
     setFormState((prevState) => ({ ...prevState, errors }));
 
 
@@ -238,7 +240,7 @@ export const useForm = (validate) => {
 
     setUpload(false);
     const values = formState.values;
-    const errors = validate(values);
+    const errors = validate(values, isPhoneVerified);
     setFormState((prevState) => ({ ...prevState, errors }));
 
 
@@ -285,6 +287,7 @@ export const useForm = (validate) => {
           values: { ...initialValues },
           errors: { ...initialValues },
         }));
+        setIsPhoneVerified(false); // Reset phone verification
         removeAllFile()
         setUpload(true);
         setProgress({ started: false, pc: 0 });
@@ -323,6 +326,12 @@ export const useForm = (validate) => {
     event.persist();
     const { name, value } = event.target;
     const formattedValue = (name === "yourPhone" || name === "suspectPhone") ? value.replace(/[^+\d]/g, "") : value;
+    
+    // Reset phone verification if phone number changes
+    if (name === "yourPhone" && formattedValue !== formState.values.yourPhone) {
+      setIsPhoneVerified(false);
+    }
+    
     setFormState((prevState) => ({
       ...prevState,
       values: {
@@ -341,6 +350,8 @@ export const useForm = (validate) => {
     handleSubmit,
     setFormState,
     setProgress,
+    isPhoneVerified,
+    setIsPhoneVerified,
     values: formState.values,
     errors: formState.errors,
     progress,

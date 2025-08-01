@@ -2,7 +2,7 @@
 import { notification } from "antd";
 import i18n from "../../translation";
 
-export default function validate(values) {
+export default function validate(values, isPhoneVerified = false) {
   let errors = {};
 
   // if (!values.name) {
@@ -54,6 +54,20 @@ export default function validate(values) {
             "ትክክለኛ ስልክ ቁጥር ያስገቡ",
         })}
       }
+  
+  // Check if phone is verified (only if phone number is valid)
+  else if (values.yourPhone && !isPhoneVerified) {
+    {i18n.language == 'en' ? errors.yourPhone = "Please verify your phone number" : errors.yourPhone = "እባክዎ የስልክ ቁጥርዎን ያረጋግጡ"};
+    {i18n.language == 'en' ?  notification["error"]({
+      message: "",
+      description:
+        "Please verify your phone number with OTP",
+    }) :  notification["error"]({
+      message: "",
+      description:
+        "እባክዎ የስልክ ቁጥርዎን በOTP ያረጋግጡ",
+    })}
+  }
 
   //   if (!/^(0\d{9}|7\d{8}|9\d{8})$/.test(inputs.phone)){
   //     handleError('Please Input a Valid Phone Number', 'phone');

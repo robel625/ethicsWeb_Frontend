@@ -257,7 +257,31 @@ box-shadow: 10px -1px 67px 19px rgba(0,0,0,0.18);
     border: 1px solid rgba(247, 3, 3, 0.8);
   }
 
+  .verified{
+    border: 1px solid rgba(34, 197, 94, 0.8);
+    background-color: rgba(34, 197, 94, 0.05);
+  }
 
+  .otp-verification-popup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 500px;
+    min-height: 300px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    z-index: 1001;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px -1px 67px 19px rgba(0,0,0,0.18);
+    -moz-box-shadow: 10px -1px 67px 19px rgba(0,0,0,0.18);
+    box-shadow: 10px -1px 67px 19px rgba(0,0,0,0.18);
+  }
   .ticketContainer{
      display: flex;
      align-items: center;
@@ -280,6 +304,9 @@ box-shadow: 10px -1px 67px 19px rgba(0,0,0,0.18);
         margin-top: 10px;
     }
     .status_popup{
+        min-width: 350px;
+    }
+    .otp-verification-popup{
         min-width: 350px;
     }
   }

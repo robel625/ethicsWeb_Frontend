@@ -1,0 +1,217 @@
+/* body {
+    background: #76b852;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  } */
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+  html,
+  body {
+    width: 100%;
+    /* height: 100%; */
+    /* overflow-x: hidden; */
+    background: #69bf70;
+    /* display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center; */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @font-face {
+    font-family: ebrima;
+    src: url(./assets/fonts/ebrima.ttf);
+  }
+  .ebrima {
+    /* font-family: ebrima; */
+    font-family: ebrima, sans-serif;
+  }
+
+
+
+
+
+  
+  .signUp-container {
+    /* border: 2px solid blue; */
+    max-width: calc((1100 / 16) * 1rem);
+    margin: 0 auto;
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* height: 100vh; */
+    gap: calc((30 / 16) * 1rem);
+    padding: 0 10 0 10;
+    font-family: ebrima, sans-serif;
+  }
+  
+  /* COLUMNS  */
+  
+  .signUp-column {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .signUp-left {
+    align-items: center;
+    padding-left: 10px;
+    /* padding: calc((120 / 16) * 1rem) 0; */
+  }
+  
+  .signUp-right {
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .logo-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+
+
+  /* LEFT  */
+
+.signUp-column h1 {
+  align-self: flex-start;
+  font-size: calc((56 / 20) * 0.6rem);
+  /* letter-spacing: calc((1.75 / 16) * 1rem); */
+  line-height: 1.2;
+  margin-bottom: calc((25 / 16) * 1rem);
+  font-weight: 600;
+  /* display: inline-block;
+  vertical-align: top; */
+}
+
+.signUp-column h1 > span {
+  display: block;
+}
+
+.signUp-column h1 > span > span {
+  color: #fed287;
+}
+
+
+.signUp-column p {
+  font-size: calc((18 / 16) * 1rem);
+  line-height: 1.5;
+  max-width: calc((432 / 16) * 1rem);
+}
+
+/* CHANGING WORDS ANIMATION ELEMENTS  */
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+  .signUp-container {
+    /* max-width: unset; */
+    width: "100%";
+    height: "100%";
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 0;
+  }
+
+  .logo-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+
+  .leftText{
+      display: none;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .signUp-column h1 {
+    font-size: max(24px, 9vw);
+  }
+  .signUp-column h1 > span {
+    /* border: 1px solid red; */
+    width: 100%;
+    width: 100%;
+  }
+  .signUp-column p,
+  .signUp-column h2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .signUp-column p {
+    font-size: min(18px, 5.5vw);
+  }
+}
+
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #f9a34c; /* Orange */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "About": "ስለ እኛ",
+  "Blog": "ብሎግ",
+  "Policy": "ፖሊሲ",
+  "Mission": "Misión",
+  "Product": "Producto",
+  "Tell us everything": "ያሎትን ሀሳብ ያጋሩን",
+  "Contact": "አግኙን",
+  "Do you have any question? Feel free to reach out.": "ማንኛውም ጥያቄ ካሎት መጠየቅ ይችላሉ",
+  "Let's Chat": "እናውራ",
+  "Application Security": "አፕልኬሽን ደንነት",
+  "Software Principles": "የሶፍትዌር መርሆች",
+  "Company": "ድርጅት",
+  "Support Center": "Centro de Apoyo",
+  "Customer Support": "Atención al cliente",
+  "Address": "አድራሻ",
+  "Ethiopia": "ኢትዮጵያ",
+  "Piazza, Addis Ababa": "ፒያሳ አዲስ አበባ",
+  "Press": "ፕሬስ",
+  "905 Customer Support": "905 የጥሪ መዐከል",
+  "Careers & Culture": "Carreras & cultura",
+  "Language": "ቋንቋ",
+  "Explore": "Explorar",
+  "Learn more": "Más información",
+  "Get started": "Comenzar",
+  "Submit": "ላክ",
+  "Message" : "Mensaje",
+  "Your Message": "Tu Mensaje",
+  "Name" : "Nombre",
+
+  "Your Name": "ስም",
+  "Email" : "ኢሜል",
+  "Your Email": "ኢሜል",
+  "Your Phone Number": "ስልክ ቁጥር",
+  "Your Address": "አድራሻ",
+
+  "Your Name (optional)": "ስም",
+  "Your phone": "ስልክ",
+  "Your email (optional)": "ኢሜል",
+  "Your Address (optional)":"አድራሻ",
+
+  
+  "Ethics and Anti-Corruption Directorate Public Feed Back System": "የኢትዮጵያ ኤሌክትሪክ አገልግሎት ስነምግባር እና ፀረ ሙስና ዳይሬክቶሬት አስተያየት መሰጫ እና መመዘኛ",
+  "United": "ሙስና የጋራ ጠላታችን ነው",
+  "Against Corruption": "በህብረት እንታገል",
+  "Report": "ሪፖርት አድርግ",
+  "Your Information": "የጥቆማ አቅራቢው መረጃ",
+  
+  "Report form": "የጥቆማ ሪፖርት አቀራረብ",
+  "Report form containt":
+  "የሚያቀርቡት ጥቆማ በተገቢው መንገድ አጣርቶ ትክክለኛ እርምጃ ለመውሰድ እንዲያስችል ጥቆማዎትን በትክክል ቅፁ በሚጠይቀው መልኩ እንዲሞሉ እና ደጋፊ መረጃዎትን እንዲያቀርቡ በማክበር እንጠይቃለን።",
+
+  "This form allows you to report suspected corruption in a safe and confidential manner.":
+  "የሚያቀርቡት ጥቆማ ሚስጥራዊነቱን የተጠበቀ ስለሆነ ጥቆማዎትን በመተማመን እንዲያቀርቡ እናበረታታለን",
+  "middle block content":"",
+
+  "Incident Information": "የጥቆማው መረጃ",
+  "Incident happened date (optional)": "ችግሩ የተከሰተበት ቀን",
+  "Incident happened Location": "ችግሩ የተከሰተበት ቦታ",
+  "Location": "ችግሩ የተከሰተበት ቦታ",
+
+  "Upload Your files": "ላቀረቡት ጥቆማ ደጋፊ ማስረጃ ያያይዙ",
+
+  "Suspect's Information (optional)": "ጥቆማ የቀረበበት አካል ዝርዝር መረጃ",
+  "Suspect's Name": "ጥቆማ የቀረበበት አካል ስም",
+  "Suspect's Phone Number": "ጥቆማ የቀረበበት አካል ስልክ ቁጥር",
+  "Suspect's Position": "ጥቆማ የቀረበበት አካል የስራ መደብ",
+
+  "To which EEU (Region, District, CSC) to inform your suggestion (optional)": "ጥቆማ የቀረበበት የስራ ክፍል",
+  "Details of your Report": "የጥቆማ ዝርዝር ማብራሪያ",
+  "Submit supporting evidence for your report": "ላቀረቡት ጥቆማ ደጋፊ ማስረጃ ያቅርቡ",
+
+
+  "Thank You!": "አናመሰግናለን!",
+  "Your Report has been successfully submitted. Thanks!": "ጥቆማዎት በተስካ ሁኔታ አስተላልፈዋል. አናመሰግናለን!",
+  "OK": "OK",
+
+  "Category": "የሙስና ዓይነት",
+  "Corruption Type": "የሙስና ዓይነቶች ይምረጡ",
+  "undue delaying of matters":    "ያላግባብ ጉዳይን ማጓተት/ማጉላላት/",  
+  "Biribery, giving bribe, undue advantage":    "ጉቦ መጠየቅ፣ መቀበል፣ ወይም መስጠት",  
+  "acceptance of undue advantage":    "የማይገባ ጥቅም መጠየቅ/መቀበል",  
+  "maladminstaration of EEU works":    "ሥራን በማይመች አኳኋን መምራት",  
+  "Illegal collection of money":    "በህገወጥ መንገድ ገንዘብ መሰብሰብ",  
+  "possession of unexplained money & property":    "ምንጩ ያልታወቀ ንብረት እና ገንዘብ ይዞ መገኘት",  
+  "Breach of trust":    "እምነት ማጉደል",  
+  "using forgery document":    "በሐሰተኛ ሰነድ መገልገል",  
+  "suppression of official or Organizational documents":    "ሰነዶችን ማጥፋት ወይም ጉዳት ማድረስ",  
+  "Breach of official secrecy":    "የተቋምን ምስጢር አለመጠበቅ",  
+  "Facilitating Act of Bribry":    "ማቀባበል(ጉቦ እንዲሰጣጡ ሁኔታዎችን ማመቻቸት፣ ማገናኘት ማስማማት መደለል)",  
+  "Abuse of power or responsibility":    "ስልጣንን ያለአግባብ መገልገል",  
+  "Distortion of priority":    "ቅድመ ተከተል ማዛባት",  
+  "Illegal electric line installation":    "ህገወጥ ኤልክትሪክ ቆጣሪ/መስመር ዝርጋታ",  
+  "Discrimination":    "አድሎ መፈጸም",  
+  "Involvement in situations that create a conflict of interest":    "የጥቅም ግጭት በሚፈጥሩ ሁኔታዎች ላይ መሳተፍ", 
+  "Others": "ሌሎች", 
+  
+  "Please Select": "ይምረጡ",
+
+  "Report corruption honestly & with evidence.": "ጥቆማዎን በሀቀኝነት እና በማስረጃ ያቅርቡ ።",
+  "Your report will remain secured & anonymous.": "ጥቆማዎ ሚስጢራዊነቱ የተጠበቀ ይሆናል ።",
+
+  "Note": "ማሳሰቢያ",
+
+  "To check the status of your report, please click this link": "ጥቆማዎ ምን ላይ እንደደረሰ ለማየት ቀጥሎ ያለውን ሊንክ ይጫኑ",
+
+  "Track Case": "ጥቆማዎ ያለበት ሁኔታ",
+  "Ticket Number": "የትኬት ቁጥር",
+  "Search": "ፈልግ",
+  "Both fields are required!": "ሁለቱንም ሳጥን ይሙሉ",
+  "Please Input a Valid Phone Number": "ትክክለኛ ስልክ ቁጥር ያስገቡ",
+  "Status": "ሁኔታ",
+  "Case not found": "መረጃው አልተገኘም",
+  "Received": "ተቀብለናል",
+  "Under Review": "በግምገማ ላይ",
+  "Assigned": "አጣሪ ተመድቧል",
+  "Investigation In Progress": "ምርመራ በሂደት ላይ",
+  "Report Approved": "ሪፖርት ጸድቋል",
+  "Canceled": "ተሰርዟል",
+  "Process Completed": "ሂደቱ ተጠናቋል",
+  "Closed": "መዝገብ ተዘግቷል",
+  "Resolved": "ጉዳይ ተፈቷል"
+}

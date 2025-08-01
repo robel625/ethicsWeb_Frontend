@@ -6,7 +6,7 @@ import { FormGroup, ButtonContainer } from "./styles";
 import './style.css'
 import { Row, Col, TreeSelect, DatePicker } from "antd";
 import { Button } from "./Button";
-import EtDatePicker, { EtLocalizationProvider } from "mui-ethiopian-datepicker";
+// import EtDatePicker, { EtLocalizationProvider } from "mui-ethiopian-datepicker";
 import { treeData } from "./TreeData";
 import Dropzone from "./Dropzone";
 import { useForm } from "./common/useForm2";
@@ -242,17 +242,17 @@ const SignupForm = ({t,scrollTo}) => {
                  <div className="inboxTitle mb-1 mt-[-10px] md:mt-2">{t("Incident happened date (optional)")}</div>
                  <DatePicker onChange={onChangeDate} disabledDate={d => !d || d.isAfter(new Date()) }   style={{ width: "100%", marginBottom: 10,}}/>
                  </>
-                ) : (
-                 <EtLocalizationProvider>
-                 <EtDatePicker
-                 label={t("Incident happened date (optional)")}
-                  onChange={handleDateChange}
-                  value={date}
-                  style={{ height: 30, marginBottom: 5, width: "100%", fontFamily: 'ebrima'}}
-                  minDate={new Date("2010-08-20")}
-                  maxDate={new Date()}
-                 />
-                  </EtLocalizationProvider>
+                ) : (<></>
+                 // <EtLocalizationProvider>
+                 // <EtDatePicker
+                 // label={t("Incident happened date (optional)")}
+                 //  onChange={handleDateChange}
+                 //  value={date}
+                 //  style={{ height: 30, marginBottom: 5, width: "100%", fontFamily: 'ebrima'}}
+                 //  minDate={new Date("2010-08-20")}
+                 //  maxDate={new Date()}
+                 // />
+                 //  </EtLocalizationProvider>
                   )}
               </Col>
               <Col lg={12} md={12} sm={12} xs={24}>
